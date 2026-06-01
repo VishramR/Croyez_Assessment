@@ -1,29 +1,88 @@
 # Croyez Immigration — Frontend Assessment
 
-Screenshot-to-code implementation of the Croyez Immigration **About** page.
+# Project Overview
+
+This project is a frontend implementation of the Croyez Immigration About page based on the provided design screenshot.
+
+The application is built using Next.js 15 and Tailwind CSS v4 with a focus on:
+
+* Responsive UI implementation
+* Component-based architecture
+* Performance optimization
+* Accessibility and semantic HTML
+* Clean and maintainable code structure
+
+The About page is divided into reusable sections such as Banner, Services, Steps, Reviews, and Achievements for better scalability and maintainability.
 
 ---
 
-# Tech Stack
+# Key Features
 
-* Next.js 15
-* Tailwind CSS v4
+* Built with Next.js App Router
+* Styled using Tailwind CSS v4
+* Lazy loading implemented using `next/dynamic`
+* Reusable navigation and footer components
+* Responsive layout across screen sizes
+* Inline SVG usage without external icon libraries
+* Accessibility support using semantic elements and ARIA attributes
+
+---
+
+# Setup & Run Instructions
+
+## 1. Clone the Repository
+
+```bash id="wd4e9f"
+git clone https://github.com/VishramR/Croyez_Assessment.git
+```
+
+## 2. Open the Project in VS Code
+
+```bash id="wt6lbz"
+cd <project-folder>
+code .
+```
+
+## 3. Install Dependencies
+
+```bash id="8c7s5l"
+npm install
+```
+
+## 4. Run Development Server
+
+```bash id="7nm7xk"
+npm run dev
+```
+
+Open the browser and visit:
+
+```text id="8u34u5"
+http://localhost:3000
+```
+
+## 5. Production Build
+
+```bash id="jlwm4t"
+npm run build
+npm start
+```
 
 ---
 
 # Folder Structure
 
-```text id="w0vk4h"
+```text id="rxq6vg"
 /public
-  └── immigration.jpg         # Banner image
+  └── immigration.jpg
 
 /app
-  ├── layout.js               # Root layout (NavHead + Footer)
-  ├── globals.css             # Global styles & custom utilities
-  ├── page.js                 # Home page (redirects to /about)
+  ├── layout.js
+  ├── globals.css
+  ├── page.js
 
   ├── /about
-  │   ├── page.js             # About page (lazy loads sections)
+  │   ├── page.js
   │   └── /sections
   │       ├── Banner.jsx
   │       ├── WhoWeAre.jsx
@@ -44,53 +103,16 @@ Screenshot-to-code implementation of the Croyez Immigration **About** page.
 
 ---
 
-# Setup & Run
-
-## 1. Install Dependencies
-
-```bash id="0k9ln5"
-npm install
-```
-
-## 2. Run Development Server
-
-```bash id="d00f50"
-npm run dev
-```
-
-Open:
-
-```text id="ij6mrx"
-http://localhost:3000
-```
-
-## 3. Build & Run Production
-
-```bash id="zv16ta"
-npm run build
-npm start
-```
-
----
-
-# Notes
-
-* Banner and WhoWeAre sections are eagerly loaded for better First Contentful Paint (FCP).
-* Remaining sections are lazy loaded using `next/dynamic`.
-* Custom utility classes are defined in `globals.css`.
-* Inline SVGs are used instead of external icon libraries.
-* Accessibility and semantic HTML practices are followed throughout the project.
-
----
-
 # Known Limitations
 
-* Implementation is based solely on the provided screenshot reference.
-* Exact original assets were unavailable, so similar placeholder/stock assets were used.
+* The implementation is based solely on the provided screenshot reference.
+* Original design assets were unavailable, so similar placeholder/stock assets were used where necessary.
 
 ---
 
-# Repository Information
+# Additional Notes
 
-* Includes `.gitignore` for excluding unnecessary files and folders.
-* Optimized folder structure for scalability and maintainability.
+* Banner and WhoWeAre are eagerly loaded for faster initial rendering.
+* Remaining sections are dynamically imported for performance optimization.
+* Custom utility classes are defined in `globals.css`.
+* Semantic HTML and accessibility best practices are followed throughout the application.
