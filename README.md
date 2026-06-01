@@ -58,7 +58,7 @@ npm run dev
 Open the browser and visit:
 
 ```text id="8u34u5"
-http://localhost:3000
+http://localhost:3000/about
 ```
 
 ## 5. Production Build
