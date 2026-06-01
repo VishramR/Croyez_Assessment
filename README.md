@@ -1,14 +1,19 @@
 # Croyez Immigration — Frontend Assessment
 
-Screenshot to code implementation of the Croyez Immigration **About** page.
+Screenshot-to-code implementation of the Croyez Immigration **About** page.
 
-## Tech Stack
+---
 
-- [Next.js 15](https://nextjs.org/)
-- [Tailwind CSS v4](https://tailwindcss.com/)
+# Tech Stack
 
-## Folder Structure
+* Next.js 15
+* Tailwind CSS v4
 
+---
+
+# Folder Structure
+
+```text id="w0vk4h"
 /public
   └── immigration.jpg         # Banner image
 
@@ -16,7 +21,7 @@ Screenshot to code implementation of the Croyez Immigration **About** page.
   ├── layout.js               # Root layout (NavHead + Footer)
   ├── globals.css             # Global styles & custom utilities
   ├── page.js                 # Home page (redirects to /about)
-  │
+
   ├── /about
   │   ├── page.js             # About page (lazy loads sections)
   │   └── /sections
@@ -27,7 +32,7 @@ Screenshot to code implementation of the Croyez Immigration **About** page.
   │       ├── Steps.jsx
   │       ├── ClientReviews.jsx
   │       └── Achievements.jsx
-  │
+
   └── /components
       ├── Footer.jsx
       └── /nav
@@ -35,31 +40,57 @@ Screenshot to code implementation of the Croyez Immigration **About** page.
           ├── Navbar.jsx
           ├── NavLinks.jsx
           └── Topbar.jsx
+```
 
-## Setup & Run
+---
 
-**1. Install dependencies**
+# Setup & Run
+
+## 1. Install Dependencies
+
+```bash id="0k9ln5"
 npm install
+```
 
-**2. Run in development mode**
+## 2. Run Development Server
+
+```bash id="d00f50"
 npm run dev
-Open http://localhost:3000 in your browser.
+```
 
-**3. Build & run production**
+Open:
+
+```text id="ij6mrx"
+http://localhost:3000
+```
+
+## 3. Build & Run Production
+
+```bash id="zv16ta"
 npm run build
 npm start
+```
 
-Open http://localhost:3000 to verify the production build.
+---
 
-## Known Limitations
+# Notes
 
-- Implementation is based solely on the screenshot reference.
-- Exact images and illustrations used in the original design were not available, so similar stock images and placeholders have been used in their place.
+* Banner and WhoWeAre sections are eagerly loaded for better First Contentful Paint (FCP).
+* Remaining sections are lazy loaded using `next/dynamic`.
+* Custom utility classes are defined in `globals.css`.
+* Inline SVGs are used instead of external icon libraries.
+* Accessibility and semantic HTML practices are followed throughout the project.
 
-## Notes
+---
 
-- `Banner` and `WhoWeAre` are eagerly loaded for fast First Contentful Paint (FCP).
-- All remaining sections are lazy loaded using `next/dynamic` for better performance.
-- Custom layout utilities (`container`, `banner-text`, `btn-primary`, etc.) are defined in `globals.css` using Tailwind's `@utility` API.
-- SVGs are used inline for icons and decorative elements — no external icon library needed.
-- ARIA attributes are applied throughout for accessibility and semantic structure.
+# Known Limitations
+
+* Implementation is based solely on the provided screenshot reference.
+* Exact original assets were unavailable, so similar placeholder/stock assets were used.
+
+---
+
+# Repository Information
+
+* Includes `.gitignore` for excluding unnecessary files and folders.
+* Optimized folder structure for scalability and maintainability.
